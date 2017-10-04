@@ -1257,6 +1257,16 @@ pre .javascript .function {
 .use-motion .collection-title {
   opacity: 0;
 }
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+}
+.post-body p a:hover {
+  color: #fc6423;
+  border-bottom: none;
+  border-bottom: 1px solid #fc6423;
+}
 .posts-expand {
   padding-top: 40px;
 }
@@ -1933,7 +1943,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff82;
+  background: #24ffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3004,10 +3014,10 @@ pre .javascript .function {
   clear: both;
 }
 .sidebar a {
-  color: #555;
+  color: rgba(255,0,0,0.52);
 }
 .sidebar a:hover {
-  color: #222;
+  color: #f00;
 }
 .links-of-author-item a:before {
   display: none;
@@ -3134,4 +3144,7 @@ pre .javascript .function {
 }
 .footer {
   bottom: auto;
+}
+.posts-expand .post-meta {
+  margin: 10px 0 10px 0;
 }
