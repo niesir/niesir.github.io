@@ -53,7 +53,7 @@
 <link href="/css/main.css?v=" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="vultr,vps,教程,vultr教程,ss," />
+  <meta name="keywords" content="vultr,vps,教程,ssr,vultr教程," />
 
 
 
@@ -69,28 +69,25 @@
 
 
 
-<meta name="description" content="Vultr官网注册地址 没有注册和购买vultr vps服务器，请看最新Vultr注册及VPS购买图文教程  点击创建好的Server，进入详情页面：  PC安装 ssh 连接 VPS 首先，要连接我们的 VPS。下载安装 ssh 软件，我用的xshell 5。可以通过搜索引擎自己下载安装  百度网盘下载链接: https://pan.baidu.com/s/1hs9u76O 密码: a1hb">
-<meta name="keywords" content="vultr,vps,教程,vultr教程,ss">
+<meta name="description" content="Vultr官网注册地址 没有注册和购买vultr vps服务器，请看最新Vultr注册及VPS购买图文教程  部署ShadowSocksR 为什么选择SSR而不是原版的SS主要原因如下  可以直接启用chacha20加密，在移动设备上比较好使 TFO(TCP Fast Open)直接自带，减少握手次数。 二次混淆和抗重放等附加功能   本脚本适用环境：系统支持：CentOS，Debian，Ubu">
+<meta name="keywords" content="vultr,vps,教程,ssr,vultr教程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vultr VPS主机快速安装Shadowsocks（ss）完整图文教程">
-<meta property="og:url" content="http://vultr.aicnm.com/Vultr-VPS主机快速安装Shadowsocks（ss）完整图文教程/index.html">
+<meta property="og:title" content="Vultr VPS主机快速安装SSR完整图文教程">
+<meta property="og:url" content="http://vultr.aicnm.com/Vultr-VPS主机快速安装SSR完整图文教程/index.html">
 <meta property="og:site_name" content="Vultr">
-<meta property="og:description" content="Vultr官网注册地址 没有注册和购买vultr vps服务器，请看最新Vultr注册及VPS购买图文教程  点击创建好的Server，进入详情页面：  PC安装 ssh 连接 VPS 首先，要连接我们的 VPS。下载安装 ssh 软件，我用的xshell 5。可以通过搜索引擎自己下载安装  百度网盘下载链接: https://pan.baidu.com/s/1hs9u76O 密码: a1hb">
+<meta property="og:description" content="Vultr官网注册地址 没有注册和购买vultr vps服务器，请看最新Vultr注册及VPS购买图文教程  部署ShadowSocksR 为什么选择SSR而不是原版的SS主要原因如下  可以直接启用chacha20加密，在移动设备上比较好使 TFO(TCP Fast Open)直接自带，减少握手次数。 二次混淆和抗重放等附加功能   本脚本适用环境：系统支持：CentOS，Debian，Ubu">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://vultr.aicnm.com/images/vps信息.png">
-<meta property="og:image" content="http://vultr.aicnm.com/images/xshell信息.png">
-<meta property="og:image" content="http://vultr.aicnm.com/images/xshell登录.png">
-<meta property="og:image" content="http://vultr.aicnm.com/images/osxss登录.png">
-<meta property="og:image" content="http://vultr.aicnm.com/images/osxss成功.png">
-<meta property="og:image" content="http://vultr.aicnm.com/images/ss密码.png">
-<meta property="og:image" content="http://vultr.aicnm.com/images/ss端口.png">
-<meta property="og:image" content="http://vultr.aicnm.com/images/ss连接方式.png">
-<meta property="og:image" content="http://vultr.aicnm.com/images/ss成功.png">
-<meta property="og:updated_time" content="2017-10-04T01:41:50.000Z">
+<meta property="og:image" content="http://vultr.aicnm.com/images/ssr密码.png">
+<meta property="og:image" content="http://vultr.aicnm.com/images/ssr端口.png">
+<meta property="og:image" content="http://vultr.aicnm.com/images/ssr加密.png">
+<meta property="og:image" content="http://vultr.aicnm.com/images/ssr协议.png">
+<meta property="og:image" content="http://vultr.aicnm.com/images/ssr混淆.png">
+<meta property="og:image" content="http://vultr.aicnm.com/images/ssr完成.png">
+<meta property="og:updated_time" content="2017-10-04T07:10:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vultr VPS主机快速安装Shadowsocks（ss）完整图文教程">
-<meta name="twitter:description" content="Vultr官网注册地址 没有注册和购买vultr vps服务器，请看最新Vultr注册及VPS购买图文教程  点击创建好的Server，进入详情页面：  PC安装 ssh 连接 VPS 首先，要连接我们的 VPS。下载安装 ssh 软件，我用的xshell 5。可以通过搜索引擎自己下载安装  百度网盘下载链接: https://pan.baidu.com/s/1hs9u76O 密码: a1hb">
-<meta name="twitter:image" content="http://vultr.aicnm.com/images/vps信息.png">
+<meta name="twitter:title" content="Vultr VPS主机快速安装SSR完整图文教程">
+<meta name="twitter:description" content="Vultr官网注册地址 没有注册和购买vultr vps服务器，请看最新Vultr注册及VPS购买图文教程  部署ShadowSocksR 为什么选择SSR而不是原版的SS主要原因如下  可以直接启用chacha20加密，在移动设备上比较好使 TFO(TCP Fast Open)直接自带，减少握手次数。 二次混淆和抗重放等附加功能   本脚本适用环境：系统支持：CentOS，Debian，Ubu">
+<meta name="twitter:image" content="http://vultr.aicnm.com/images/ssr密码.png">
 
 
 
@@ -120,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://vultr.aicnm.com/Vultr-VPS主机快速安装Shadowsocks（ss）完整图文教程/"/>
+  <link rel="canonical" href="http://vultr.aicnm.com/Vultr-VPS主机快速安装SSR完整图文教程/"/>
 
 
 
 
 
-  <title>Vultr VPS主机快速安装Shadowsocks（ss）完整图文教程 | Vultr 优惠码 搭建ss 测速 日本 美国 便宜 vps 教程</title>
+  <title>Vultr VPS主机快速安装SSR完整图文教程 | Vultr 优惠码 搭建ss 测速 日本 美国 便宜 vps 教程</title>
   
 
 
@@ -252,7 +249,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://vultr.aicnm.com/Vultr-VPS主机快速安装Shadowsocks（ss）完整图文教程/">
+    <link itemprop="mainEntityOfPage" href="http://vultr.aicnm.com/Vultr-VPS主机快速安装SSR完整图文教程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="vultr">
@@ -269,7 +266,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Vultr VPS主机快速安装Shadowsocks（ss）完整图文教程</h2>
+          <h2 class="post-title" itemprop="name headline">Vultr VPS主机快速安装SSR完整图文教程</h2>
         
 
         <div class="post-meta">
@@ -281,8 +278,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-29T22:22:35+08:00">
-                2017-09-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-04T14:27:43+08:00">
+                2017-10-04
               </time>
             
 
@@ -323,47 +320,36 @@
 <p><a href="https://www.vultr.com/?ref=6940636" target="_blank" rel="external">Vultr官网注册地址</a></p>
 <p>没有注册和购买vultr vps服务器，请看<a href="http://vultr.aicnm.com/%E6%9C%80%E6%96%B0Vultr%E6%B3%A8%E5%86%8C%E5%8F%8AVPS%E8%B4%AD%E4%B9%B0%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B/">最新Vultr注册及VPS购买图文教程</a></p>
 </blockquote>
-<p>点击创建好的Server，进入详情页面：<br><img src="/images/vps信息.png" alt="vps信息"></p>
-<blockquote>
-<h3 id="PC安装-ssh-连接-VPS"><a href="#PC安装-ssh-连接-VPS" class="headerlink" title="PC安装 ssh 连接 VPS"></a>PC安装 ssh 连接 VPS</h3></blockquote>
-<p>首先，要连接我们的 VPS。下载安装 ssh 软件，我用的<code>xshell 5</code>。可以通过搜索引擎自己下载安装</p>
-<blockquote>
-<p>百度网盘下载链接: <a href="https://pan.baidu.com/s/1hs9u76O" target="_blank" rel="external">https://pan.baidu.com/s/1hs9u76O</a> 密码: <code>a1hb</code></p>
+<h4 id="部署ShadowSocksR"><a href="#部署ShadowSocksR" class="headerlink" title="部署ShadowSocksR"></a>部署ShadowSocksR</h4><blockquote>
+<p>为什么选择SSR而不是原版的SS<br><em>主要原因如下</em></p>
+<ol>
+<li>可以直接启用chacha20加密，在移动设备上比较好使</li>
+<li>TFO(TCP Fast Open)直接自带，减少握手次数。</li>
+<li>二次混淆和抗重放等附加功能</li>
+</ol>
 </blockquote>
-<p>安装完成后新建会话（Alt+N）。依次填写图中信息。名称可以是Vultr或者其他，协议选择SSH，主机填写之前的IP Address，端口号选择22。<br><img src="/images/xshell信息.png" alt="xshell信息"></p>
-<p>点击左侧的用户身份验证，填写信息。方法选择Password，用户名为之前的Username（一般都是root），密码为之前的Password（这个建议直接复制粘贴过来，系统给的有点复杂）<br><img src="/images/xshell登录.png" alt="xshell登录"></p>
-<p>填写完之后点击确定。然后点击连接。出现其他提示的话选择接受就可以了。这时你就可以看到一个命令控制台了。这时就算连接成功了。</p>
+<p>本脚本适用环境：<br>系统支持：CentOS，Debian，Ubuntu<br>内存要求：≥128M</p>
 <blockquote>
-<h3 id="MacOS连接"><a href="#MacOS连接" class="headerlink" title="MacOS连接"></a>MacOS连接</h3></blockquote>
-<p>打开Terminal命令终端，ssh 登录名@服务器地址，如 ssh root@12.12.12.12，enter键之后输入yes<br><img src="/images/osxss登录.png" alt="osxss登录"></p>
-<p>出现以下提示说明连接成功<br><img src="/images/osxss成功.png" alt="osxss成功"></p>
-<blockquote>
-<h3 id="安装-SS"><a href="#安装-SS" class="headerlink" title="安装 SS"></a>安装 SS</h3></blockquote>
-<p>使用root用户登录，运行以下命令，按回车确认：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</div><div class="line">chmod +x shadowsocks.sh</div><div class="line">./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</div></pre></td></tr></table></figure>
-<p>填写ss密码，需要记住以后使用<br><img src="/images/ss密码.png" alt="ss密码"></p>
-<p>填写端口，以后使用，默认为<code>8989</code><br><img src="/images/ss端口.png" alt="ss端口"></p>
-<p>选择加密方式，我选的<code>7）aes-256-cfb</code>，默认方式是<code>aes-256-gcm</code><br><img src="/images/ss连接方式.png" alt="ss连接方式"></p>
-<p>安装完成后，脚本提示如下：<br><img src="/images/ss成功.png" alt="ss成功"></p>
-<p><strong>大功告成</strong></p>
-<p>ss卸载方法：<br>使用root用户登录，运行以下命令：</p>
-<blockquote>
-<p>./shadowsocks.sh uninstall</p>
+<p>不会ssh连接VPS的请看上篇文章中的教程内容 <a href="http://vultr.aicnm.com/Vultr-VPS%E4%B8%BB%E6%9C%BA%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85Shadowsocks%EF%BC%88ss%EF%BC%89%E5%AE%8C%E6%95%B4%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B/">Vultr快速安装ss完整图文教程</a></p>
 </blockquote>
-<p>使用命令：</p>
+<h5 id="安装SSR"><a href="#安装SSR" class="headerlink" title="安装SSR"></a>安装SSR</h5><p>使用root用户登录，运行以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh</div><div class="line">chmod +x shadowsocksR.sh</div><div class="line">./shadowsocksR.sh 2&gt;&amp;1 | tee shadowsocksR.log</div></pre></td></tr></table></figure></p>
+<p>填写ssr密码，需要记住以后使用<br><img src="/images/ssr密码.png" alt="ssr密码"></p>
+<p>填写端口，以后使用，默认为8989<br><img src="/images/ssr端口.png" alt="ssr端口"></p>
+<p>选择加密方式，，默认方式是aes-256-cfb<br><img src="/images/ssr加密.png" alt="ssr加密"></p>
+<p>可选 7 种协议，默认是origin<br><img src="/images/ssr协议.png" alt="ssr协议"></p>
+<p>安装时可选 9 种混淆插件，默认是plain<br><img src="/images/ssr混淆.png" alt="ssr混淆"></p>
+<p>安装完成后，脚本提示如下：<br><img src="/images/ssr完成.png" alt="ssr完成"></p>
+<p><strong>客户端下载</strong></p>
+<p>windows客户端：链接: <a href="https://pan.baidu.com/s/1kVGaqSf" target="_blank" rel="external">https://pan.baidu.com/s/1kVGaqSf</a> 密码: <code>8qpy</code></p>
+<p>Android客户端：链接: <a href="https://pan.baidu.com/s/1mil6eYc" target="_blank" rel="external">https://pan.baidu.com/s/1mil6eYc</a> 密码: <code>qtdg</code></p>
+<p><strong>卸载方法</strong>：<br>使用 root 用户登录，运行以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./shadowsocksR.sh uninstall</div></pre></td></tr></table></figure></p>
+<p>安装完成后即已后台启动 ShadowsocksR ，运行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/etc/init.d/shadowsocks status</div></pre></td></tr></table></figure></p>
+<p>可以查看 ShadowsocksR 进程是否已经启动。<br>本脚本安装完成后，已将 ShadowsocksR 自动加入开机自启动。</p>
+<p>使用命令：<br>启动：/etc/init.d/shadowsocks start<br>停止：/etc/init.d/shadowsocks stop<br>重启：/etc/init.d/shadowsocks restart<br>状态：/etc/init.d/shadowsocks status</p>
+<p>配置文件路径：/etc/shadowsocks.json<br>日志文件路径：/var/log/shadowsocks.log<br>代码安装目录：/usr/local/shadowsocks</p>
+<p>多用户配置示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">&quot;server&quot;:&quot;0.0.0.0&quot;,</div><div class="line">&quot;server_ipv6&quot;: &quot;[::]&quot;,</div><div class="line">&quot;local_address&quot;:&quot;127.0.0.1&quot;,</div><div class="line">&quot;local_port&quot;:1080,</div><div class="line">&quot;port_password&quot;:&#123;</div><div class="line">    &quot;8989&quot;:&quot;password1&quot;,</div><div class="line">    &quot;8990&quot;:&quot;password2&quot;,</div><div class="line">    &quot;8991&quot;:&quot;password3&quot;</div><div class="line">&#125;,</div><div class="line">&quot;timeout&quot;:300,</div><div class="line">&quot;method&quot;:&quot;aes-256-cfb&quot;,</div><div class="line">&quot;protocol&quot;: &quot;origin&quot;,</div><div class="line">&quot;protocol_param&quot;: &quot;&quot;,</div><div class="line">&quot;obfs&quot;: &quot;plain&quot;,</div><div class="line">&quot;obfs_param&quot;: &quot;&quot;,</div><div class="line">&quot;redirect&quot;: &quot;&quot;,</div><div class="line">&quot;dns_ipv6&quot;: false,</div><div class="line">&quot;fast_open&quot;: false,</div><div class="line">&quot;workers&quot;: 1</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>新增多用户配置示例。<strong>注意</strong>：如果你新增了端口，也要将该端口从防火墙（iptables 或 firewalld）中打开。</p>
 <blockquote>
-<p>启动：/etc/init.d/shadowsocks start<br>停止：/etc/init.d/shadowsocks stop<br>重启：/etc/init.d/shadowsocks restart<br>状态：/etc/init.d/shadowsocks status</p>
-</blockquote>
-<h5 id="单用户配置文件-Sample："><a href="#单用户配置文件-Sample：" class="headerlink" title="单用户配置文件 Sample："></a>单用户配置文件 Sample：</h5><blockquote>
-<p>配置文件路径：/etc/shadowsocks.json</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</div><div class="line">    &quot;server_port&quot;:8989,</div><div class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;,</div><div class="line">    &quot;local_port&quot;:1080,</div><div class="line">    &quot;password&quot;:&quot;yourpassword&quot;,</div><div class="line">    &quot;timeout&quot;:300,</div><div class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</div><div class="line">    &quot;fast_open&quot;: false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h5 id="多用户多端口配置文件-Sample："><a href="#多用户多端口配置文件-Sample：" class="headerlink" title="多用户多端口配置文件 Sample："></a>多用户多端口配置文件 Sample：</h5><blockquote>
-<p>配置文件路径：/etc/shadowsocks.json</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</div><div class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;,</div><div class="line">    &quot;local_port&quot;:1080,</div><div class="line">    &quot;port_password&quot;:&#123;</div><div class="line">         &quot;8989&quot;:&quot;password0&quot;,</div><div class="line">         &quot;9001&quot;:&quot;password1&quot;,</div><div class="line">         &quot;9002&quot;:&quot;password2&quot;,</div><div class="line">         &quot;9003&quot;:&quot;password3&quot;,</div><div class="line">         &quot;9004&quot;:&quot;password4&quot;</div><div class="line">    &#125;,</div><div class="line">    &quot;timeout&quot;:300,</div><div class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</div><div class="line">    &quot;fast_open&quot;: false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>Shadowsocks（ss）配置完之后就可以用电脑或手机客户端进行连接使用，相关教程请点击：<a href="http://vultr.aicnm.com/Windows%E3%80%81Mac%E3%80%81%E5%AE%89%E5%8D%93%E5%92%8CiOS%E4%B8%8B%E8%BD%BDss%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%8A%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/#more">Windows、Mac、安卓和iOS下载ss客户端及配置方法</a></p>
 <p>可以安装Google BBR对服务器进行加速，相关教程请点击：<a href="http://vultr.aicnm.com/CentOS%E5%AE%89%E8%A3%85Google-BBR%E5%8A%A0%E9%80%9F%E5%B7%A5%E5%85%B7%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B/">CentOS安装Google BBR加速工具图文教程</a></p>
 </blockquote>
 
@@ -427,9 +413,9 @@
           
             <a href="/tags/教程/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
           
-            <a href="/tags/vultr教程/" rel="tag"><i class="fa fa-tag"></i> vultr教程</a>
+            <a href="/tags/ssr/" rel="tag"><i class="fa fa-tag"></i> ssr</a>
           
-            <a href="/tags/ss/" rel="tag"><i class="fa fa-tag"></i> ss</a>
+            <a href="/tags/vultr教程/" rel="tag"><i class="fa fa-tag"></i> vultr教程</a>
           
         </div>
       
@@ -442,8 +428,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/最新Vultr注册及VPS购买图文教程/" rel="next" title="最新Vultr注册及VPS购买图文教程">
-                <i class="fa fa-chevron-left"></i> 最新Vultr注册及VPS购买图文教程
+              <a href="/CentOS安装Google-BBR加速工具图文教程/" rel="next" title="CentOS安装Google BBR加速工具图文教程">
+                <i class="fa fa-chevron-left"></i> CentOS安装Google BBR加速工具图文教程
               </a>
             
           </div>
@@ -451,10 +437,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Windows、Mac、安卓和iOS下载ss客户端及配置方法/" rel="prev" title="Windows、Mac、安卓和iOS下载ss客户端及配置方法">
-                Windows、Mac、安卓和iOS下载ss客户端及配置方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
