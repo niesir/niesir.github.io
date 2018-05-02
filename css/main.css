@@ -1965,7 +1965,7 @@ pre .javascript .function {
 }
 @media (max-width: 767px) {
   #sidebar-dimmer {
-    display: block;
+    display: none;
   }
 }
 .footer {
